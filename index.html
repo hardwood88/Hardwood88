@@ -1,10 +1,140 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Hardwood 88</title>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head>
-<body><main>
-<header><h1>HARDWOOD 88</h1><p class="soft">Pixel basketball franchise for iPhone and iPad</p>
-<nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav></header>
-<p>Build a dynasty. Draft, trade, sign free agents, then take the court yourself and hit the green.</p>
-</main></body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hardwood 88 · Pixel basketball franchise for iPhone and iPad</title>
+<meta name="description" content="Hardwood 88 is a pixel basketball game where you play every possession and run the franchise. Free on the App Store for iPhone and iPad.">
+<meta name="apple-itunes-app" content="app-id=6820283150">
+<meta property="og:title" content="Hardwood 88">
+<meta property="og:description" content="Pixel basketball with a franchise to run. Free on the App Store.">
+<meta property="og:image" content="https://hardwood88.github.io/Hardwood88/assets/share.jpg">
+<meta property="og:url" content="https://hardwood88.github.io/Hardwood88/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2a1a10">
+<link rel="icon" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:"Big Shoulders";src:url(assets/bigshoulders.ttf) format("truetype");font-weight:700;font-display:swap}
+:root{
+  --walnut:#2a1a10;
+  --line:rgba(246,231,207,.14);
+  --floor:#b9773f;
+  --orange:#ff6b1a;
+  --gold:#ffc93c;
+  --cream:#f6e7cf;
+  --muted:#c9b393;
+  --display:"Big Shoulders",Impact,sans-serif;
+  --body:"Outfit",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+body{font-family:var(--body);color:var(--cream);background:var(--walnut);font-size:1.0625rem;line-height:1.6;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%;height:auto}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:4px;border-radius:8px}
+
+.wrap{max-width:880px;margin:0 auto;padding:0 20px}
+
+/* hero */
+.arena{background:radial-gradient(ellipse 70% 60% at 50% 45%,#6b3d1f 0%,#3d2414 55%,var(--walnut) 100%);text-align:center}
+.crowd{height:44px;background:url(assets/crowd.png) center/auto 100% repeat-x;image-rendering:pixelated;opacity:.9}
+.hero{padding:64px 20px 72px}
+.icon{width:96px;height:96px;border-radius:22px;margin:0 auto 28px}
+h1{font-family:var(--display);font-weight:700;text-transform:uppercase;line-height:.85;color:var(--gold);
+   font-size:clamp(4rem,19vw,8.5rem);letter-spacing:.005em}
+h1 span{display:block;color:var(--orange);font-size:.62em;margin-top:.08em}
+.lede{font-size:clamp(1.0625rem,3.4vw,1.25rem);max-width:28ch;margin:24px auto 32px;color:var(--cream)}
+
+.get{display:inline-block;text-decoration:none;background:var(--orange);color:#2a1206;border-radius:12px;
+     padding:15px 28px;font-family:var(--display);font-weight:700;font-size:1.5rem;line-height:1;text-transform:uppercase;letter-spacing:.02em;
+     box-shadow:0 5px 0 #a13d07;transition:transform .08s,box-shadow .08s}
+.get:hover{transform:translateY(2px);box-shadow:0 3px 0 #a13d07}
+.get:active{transform:translateY(5px);box-shadow:none}
+.sub{display:block;margin-top:14px;font-size:.9375rem;color:var(--muted)}
+
+/* gameplay */
+.court{background:var(--floor);padding:40px 0}
+.court video{width:100%;max-width:960px;margin:0 auto;aspect-ratio:1280/590;border-radius:14px;background:#000;
+             image-rendering:pixelated;box-shadow:0 18px 44px rgba(50,22,4,.4)}
+
+/* sections */
+.block{padding:88px 0 0}
+h2{font-family:var(--display);font-weight:700;text-transform:uppercase;color:var(--gold);
+   font-size:clamp(2.25rem,7vw,3.25rem);line-height:.95;margin-bottom:14px}
+.block p{max-width:52ch;color:var(--cream)}
+.block p + p{margin-top:10px}
+.shot{margin-top:28px;border-radius:12px}
+
+.facts{list-style:none;padding:0;margin-top:24px;border-top:1px solid var(--line)}
+.facts li{padding:14px 0;border-bottom:1px solid var(--line);color:var(--cream)}
+
+.final{text-align:center;padding:104px 0 96px}
+.final h2{margin-bottom:26px}
+
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:.9375rem;text-align:center;padding:28px 20px 40px}
+footer nav{display:flex;gap:24px;justify-content:center;margin-bottom:8px}
+footer a{color:var(--cream)}
+
+@media (prefers-reduced-motion:reduce){.get{transition:none}}
+</style>
+</head>
+<body>
+
+<header class="arena">
+  <div class="crowd" role="presentation"></div>
+  <div class="hero">
+    <img class="icon" src="assets/icon.png" alt="Hardwood 88 app icon" width="96" height="96">
+    <h1>Hardwood<span>88</span></h1>
+    <p class="lede">Pixel basketball with a franchise to run. Hit the shot, then handle the contracts, the trades and the press.</p>
+    <a class="get" href="https://apps.apple.com/us/app/hardwood-88/id6820283150">Download on the App Store</a>
+    <span class="sub">Free for iPhone and iPad</span>
+  </div>
+</header>
+
+<section class="court" aria-label="Gameplay">
+  <div class="wrap">
+    <video src="assets/gameplay.mp4" poster="assets/gameplay-poster.jpg" autoplay muted loop playsinline aria-label="Hardwood 88 gameplay: four dunks and a championship celebration"></video>
+  </div>
+</section>
+
+<main class="wrap">
+  <section class="block">
+    <h2>Every possession is yours</h2>
+    <p>Steal it, push it, and hold to shoot. Let go in the green for a good release. Windmills, tomahawks, threes from downtown and buzzer beaters all get their moment.</p>
+    <img class="shot" src="assets/game.jpg" alt="A live game: Portland versus Charlotte in the fourth quarter, with pass and shoot buttons" width="1434" height="660" loading="lazy">
+  </section>
+
+  <section class="block">
+    <h2>Then run the front office</h2>
+    <p>Set the roster, sign free agents, make trades before the deadline and keep an eye on who wants an extension. Play through the calendar one game at a time, or sim ahead.</p>
+    <img class="shot" src="assets/hub.jpg" alt="The franchise hub with the next game, division standings and players who need attention" width="1434" height="660" loading="lazy">
+  </section>
+
+  <section class="block">
+    <h2>Free to play</h2>
+    <p>The free version shows one ad after each game. HARDWOOD PRO removes it with a single purchase. There's no subscription.</p>
+    <ul class="facts">
+      <li>No account and no sign-up. Your franchise lives on your phone.</li>
+      <li>Three save slots, backed up to your iCloud if you want.</li>
+      <li>Game Center leaderboards and achievements.</li>
+    </ul>
+  </section>
+
+  <section class="final">
+    <h2>Your season starts now</h2>
+    <a class="get" href="https://apps.apple.com/us/app/hardwood-88/id6820283150">Download on the App Store</a>
+    <span class="sub">Free for iPhone and iPad</span>
+  </section>
+</main>
+
+<footer>
+  <nav><a href="support.html">Support</a><a href="privacy.html">Privacy</a></nav>
+  <p>© 2026 Matthew Fino</p>
+</footer>
+
+</body>
+</html>
